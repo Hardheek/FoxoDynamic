@@ -55,7 +55,16 @@ const ListingScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Submitted List Data</Text>
+      <View style={styles.header}>
+        <TouchableOpacity
+          style={styles.backButton}
+          onPress={() => navigation.goBack()}>
+          <Text style={styles.backText}>← Back</Text>
+        </TouchableOpacity>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Submitted List Data</Text>
+        </View>
+      </View>
       <TextInput
         style={styles.searchBar}
         placeholder="Search by Form Name"
@@ -96,7 +105,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    marginBottom: 15,
     color: appConfig?.theme?.textColor,
     textAlign: 'center',
   },
@@ -122,6 +130,26 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 5},
     shadowRadius: 10,
     elevation: 6,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    paddingVertical: 15,
+  },
+  backButton: {
+    position: 'absolute',
+    left: 0,
+  },
+  titleContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  backText: {
+    textAlign: 'left',
+    fontSize: 16,
+    color: appConfig?.theme?.textColor,
   },
   row: {
     flexDirection: 'row',

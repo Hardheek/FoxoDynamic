@@ -6,7 +6,7 @@ import SplashScreen from './Screens/SplashScreen';
 import DynamicForm from './Screens/DynamicForm';
 import ListingScreen from './Screens/ListingScreen';
 import DisplayScreen from './Screens/DisplayScreen';
-import { Easing } from 'react-native';
+import { Easing, SafeAreaView } from 'react-native';
 import { appConfig } from './config';
 
 const Stack = createNativeStackNavigator();
@@ -35,18 +35,20 @@ export const customAnimation = {
 
 const AppNavigator = () => {
   return (
-    <ErrorBoundary>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{headerShown: false, ...customAnimation}}
-          initialRouteName={INITIAL_ROUTE}>
-          <Stack.Screen name="SplashScreen" component={SplashScreen} />
-          <Stack.Screen name="DynamicForm" component={DynamicForm} />
-          <Stack.Screen name="ListingScreen" component={ListingScreen} />
-          <Stack.Screen name="DisplayScreen" component={DisplayScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </ErrorBoundary>
+    <SafeAreaView style={{flex: 1}}>
+      <ErrorBoundary>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{headerShown: false, ...customAnimation}}
+            initialRouteName={INITIAL_ROUTE}>
+            <Stack.Screen name="SplashScreen" component={SplashScreen} />
+            <Stack.Screen name="DynamicForm" component={DynamicForm} />
+            <Stack.Screen name="ListingScreen" component={ListingScreen} />
+            <Stack.Screen name="DisplayScreen" component={DisplayScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ErrorBoundary>
+    </SafeAreaView>
   );
 };
 
