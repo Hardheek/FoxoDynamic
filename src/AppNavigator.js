@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import ErrorBoundary from './Components/ErrorBoundary';
-import SplashScreen from './Screens/SplashScreen';
-import DynamicForm from './Screens/DynamicForm';
-import ListingScreen from './Screens/ListingScreen';
-import DisplayScreen from './Screens/DisplayScreen';
+import ErrorBoundary from './components/ErrorBoundary';
 import { Easing, SafeAreaView } from 'react-native';
 import { appConfig } from './config';
+import SplashScreen from './screens/SplashScreen';
+import DynamicForm from './screens/DynamicForm';
+import ListingScreen from './screens/ListingScreen';
+import DisplayScreen from './screens/DisplayScreen';
 
 const Stack = createNativeStackNavigator();
 const INITIAL_ROUTE = 'SplashScreen';

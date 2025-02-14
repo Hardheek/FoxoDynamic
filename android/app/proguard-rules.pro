@@ -8,3 +8,8 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+-keep class java.lang.Class {*;}
+-keep class com.facebook.** {*;}
+-keep class com.reactnative.** {*;}
+-keepattributes *Annotation*
+-keep class * extends java.lang.Object { *; }
