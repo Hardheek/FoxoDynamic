@@ -8,7 +8,7 @@ export const appConfig = {
     shadowBorderColor: '#0f9d58',
   },
   splash: {
-    logo: require('./Images/foxoLogo.png'),
+    logo: require('./Images/foxo-logo.png'),
     backgroundColor: '#ffffff',
     animation: {
       fadeDuration: 1500,
@@ -20,7 +20,7 @@ export const appConfig = {
       delayBeforeNavigate: 3000,
     },
   },
-  logo: require('./Images/foxoLogo.png'),
+  logo: require('./Images/foxo-logo.png'),
   formFields: [
     {
       key: 'name',
